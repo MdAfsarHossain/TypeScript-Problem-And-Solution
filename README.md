@@ -185,3 +185,45 @@ console.log(getMostExpensiveProduct([]));
 ```
 
 ---
+
+## Problem 7:
+
+**Description:**
+
+- Define an `enum Day` for the days of the week.
+- Create a function that returns `"Weekday"` or `"Weekend"` based on the input day.
+
+**Solution:**
+
+```ts
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  switch (day) {
+    case Day.Saturday:
+    case Day.Sunday:
+      return "Weekend";
+    default:
+      return "Weekday";
+  }
+}
+
+//   getDayType(Day.Monday); // Output: "Weekday"
+//   getDayType(Day.Sunday); // Output: "Weekend"
+console.log(getDayType(Day.Monday)); // Output: "Weekday"
+console.log(getDayType(Day.Sunday)); // Output: "Weekend"
+console.log(getDayType(Day.Monday)); // Output: "Weekday"
+console.log(getDayType(Day.Tuesday)); // Output: "Weekday"
+console.log(getDayType(Day.Saturday)); // Output: "Weekend"
+console.log(getDayType(Day.Sunday)); // Output: "Weekend"
+```
+
+---
