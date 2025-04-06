@@ -255,3 +255,30 @@ squareAsync(-3).catch(console.error); // Output: Error: Negative number not allo
 ```
 
 ---
+
+--
+
+## Problem: 9
+
+**Description:**
+Create a function that takes an array of objects with name (string) and age (number) properties and returns a new array containing only the names of the people who are 18 or older.
+
+**Solution:**
+
+```ts
+function getAdultNames(people: { name: string; age: number }[]): string[] {
+  const adults = people.filter((person) => person.age >= 18);
+  return adults.map((adult) => adult.name);
+}
+
+const people = [
+  { name: "Alice", age: 17 },
+  { name: "Bob", age: 20 },
+  { name: "Charlie", age: 18 },
+  { name: "David", age: 16 },
+];
+
+console.log(getAdultNames(people)); // Output: ["Bob", "Charlie"]
+```
+
+---
