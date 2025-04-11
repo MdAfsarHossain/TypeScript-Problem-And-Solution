@@ -256,8 +256,6 @@ squareAsync(-3).catch(console.error); // Output: Error: Negative number not allo
 
 ---
 
---
-
 ## Problem: 9
 
 **Description:**
@@ -279,6 +277,30 @@ const people = [
 ];
 
 console.log(getAdultNames(people)); // Output: ["Bob", "Charlie"]
+```
+
+---
+
+## Problem: 10
+
+**Description:**
+Create a function that takes an array of numbers and returns a new array where each number is doubled, but only if the original number is even.
+
+**Solution:**
+
+```ts
+function doubleEvens(numbers: number[]): number[] {
+return numbers.map(number => {
+if (number % 2 === 0) {
+return number \* 2;
+} else {
+return number;
+}
+});
+}
+
+const numbers = [1, 2, 3, 4, 5, 6];
+console.log(doubleEvens(numbers)); // Output: [1, 4, 3, 8, 5, 12]
 ```
 
 ---
