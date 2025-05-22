@@ -48,3 +48,27 @@ console.log(filterByRating(books));
 ```
 
 ---
+
+## Problem 3:
+
+**Description:**
+Create a generic function that concatenates multiple arrays of the **same type** using rest parameters.
+
+**Solution:**
+
+```ts
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  let newArray: T[] = [];
+
+  for (const i of arrays) {
+    newArray.push(...i);
+  }
+
+  return newArray;
+}
+
+console.log(concatenateArrays(["a", "b"], ["c"])); // Output: ["a", "b", "c"]
+console.log(concatenateArrays([1, 2], [3, 4], [5])); // Output: [1, 2, 3, 4, 5]
+```
+
+---
