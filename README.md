@@ -304,3 +304,20 @@ console.log(doubleEvens(numbers)); // Output: [1, 4, 3, 8, 5, 12]
 ```
 
 ---
+
+## Problem: 11
+
+**Description:** Create a function that takes an array of strings and returns a new array containing the length of each string in the original array.
+
+**Solution:**
+
+```ts
+function stringLengths(strings: string[]): number[] {
+  return strings.map((str) => str.length);
+}
+
+const words = ["apple", "banana", "kiwi"];
+console.log(stringLengths(words)); // Output: [5, 6, 4]
+```
+
+---
