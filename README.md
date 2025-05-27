@@ -321,3 +321,22 @@ console.log(stringLengths(words)); // Output: [5, 6, 4]
 ```
 
 ---
+
+---
+
+## Problem: 12
+
+**Description:** Create a function that takes an array of numbers and returns the sum of all the numbers in the array.
+
+**Solution:**
+
+```ts
+function sumArray(numbers: number[]): number {
+  return numbers.reduce((sum, number) => sum + number, 0);
+}
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(sumArray(numbers)); // Output: 15
+```
+
+---
