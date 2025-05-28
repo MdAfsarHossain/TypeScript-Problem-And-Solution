@@ -340,3 +340,40 @@ console.log(sumArray(numbers)); // Output: 15
 ```
 
 ---
+
+## Problem: 13
+
+**Description:** Create a function that takes an array of objects with name (string) and city (string) properties, and returns a new object where the keys are the cities and the values are arrays of names of people living in that city.
+
+**Solution:**
+
+```ts
+function groupPeopleByCity(people: { name: string; city: string }[]): {
+  [city: string]: string[];
+} {
+  const cityMap: { [city: string]: string[] } = {};
+
+  for (const person of people) {
+    if (cityMap[person.city]) {
+      cityMap[person.city].push(person.name);
+    } else {
+      cityMap[person.city] = [person.name];
+    }
+  }
+
+  return cityMap;
+}
+
+const people = [
+  { name: "Alice", city: "New York" },
+  { name: "Bob", city: "New York" },
+  { name: "Charlie", city: "London" },
+  { name: "David", city: "Paris" },
+  { name: "Eve", city: "London" },
+];
+
+console.log(groupPeopleByCity(people));
+// Output: { "New York": ["Alice", "Bob"], "London": ["Charlie", "Eve"], "Paris": ["David"] }
+```
+
+---
