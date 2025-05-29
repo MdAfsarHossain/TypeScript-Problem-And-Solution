@@ -377,3 +377,21 @@ console.log(groupPeopleByCity(people));
 ```
 
 ---
+
+## Problem: 14
+
+**Description:** Create a function that takes two arrays of numbers and returns a new array containing only the numbers that are present in both arrays.
+
+**Solution:**
+
+```ts
+function findCommonElements(arr1: number[], arr2: number[]): number[] {
+  return arr1.filter((number) => arr2.includes(number));
+}
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 5, 6, 7, 8];
+console.log(findCommonElements(array1, array2)); // Output: [3, 5]
+```
+
+---
