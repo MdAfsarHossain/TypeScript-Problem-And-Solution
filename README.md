@@ -395,3 +395,20 @@ console.log(findCommonElements(array1, array2)); // Output: [3, 5]
 ```
 
 ---
+
+## Problem: 15
+
+**Description:** Create a function that takes a string and returns the string with all vowels removed.
+
+**Solution:**
+
+```ts
+function removeVowels(str: string): string {
+  return str.replace(/[aeiouAEIOU]/g, "");
+}
+
+const myString = "Hello World";
+console.log(removeVowels(myString)); // Output: Hll Wrld
+```
+
+---
