@@ -412,3 +412,26 @@ console.log(removeVowels(myString)); // Output: Hll Wrld
 ```
 
 ---
+
+## Problem 16:
+
+**Description:**
+Create a function that takes an array of numbers and returns the average of those numbers. If the array is empty, return 0.
+
+**Solution:**
+
+```typescript
+function average(numbers: number[]): number {
+  if (numbers.length === 0) {
+    return 0;
+  }
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+  return sum / numbers.length;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(average(numbers)); // Output: 3
+console.log(average([])); // Output: 0
+```
+
+---
