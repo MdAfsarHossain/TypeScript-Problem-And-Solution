@@ -435,3 +435,20 @@ console.log(average([])); // Output: 0
 ```
 
 ---
+
+## Problem 17:
+
+**Description:** Create a function that takes a string and returns the reversed version of that string.
+
+**Solution:**
+
+```ts
+function reverseString(str: string): string {
+  return str.split("").reverse().join("");
+}
+
+const myString = "hello";
+console.log(reverseString(myString)); // Output: "olleh"
+```
+
+---
