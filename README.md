@@ -452,3 +452,18 @@ console.log(reverseString(myString)); // Output: "olleh"
 ```
 
 ---
+
+## Problem 18:
+
+**Description:** Create a function that takes an array of strings and returns a new array with only the strings that have a length greater than or equal to 5.
+
+**Solution:**
+
+```ts
+function filterLongStrings(strings: string[]): string[] {
+  return strings.filter((str) => str.length >= 5);
+}
+
+const words = ["apple", "banana", "kiwi", "grape"];
+console.log(filterLongStrings(words)); // Output: ["apple", "banana", "grape"]
+```
