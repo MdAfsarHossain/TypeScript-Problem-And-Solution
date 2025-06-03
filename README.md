@@ -467,3 +467,40 @@ function filterLongStrings(strings: string[]): string[] {
 const words = ["apple", "banana", "kiwi", "grape"];
 console.log(filterLongStrings(words)); // Output: ["apple", "banana", "grape"]
 ```
+
+---
+
+## Problem 19:
+
+**Description:** Create a function that takes an array of objects with name (string) and age (number) properties and returns the oldest person's name. If the array is empty, return null.
+
+**Solution:**
+
+```ts
+function getOldestPerson(
+  people: { name: string; age: number }[]
+): string | null {
+  if (people.length === 0) {
+    return null;
+  }
+
+  let oldestPerson = people[0];
+  for (const person of people) {
+    if (person.age > oldestPerson.age) {
+      oldestPerson = person;
+    }
+  }
+  return oldestPerson.name;
+}
+
+const people = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 },
+];
+
+console.log(getOldestPerson(people)); // Output: "Charlie"
+console.log(getOldestPerson([])); // Output: null
+```
+
+---
