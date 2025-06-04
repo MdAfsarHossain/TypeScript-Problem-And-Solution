@@ -504,3 +504,26 @@ console.log(getOldestPerson([])); // Output: null
 ```
 
 ---
+
+## Problem 20:
+
+**Description:** Create a function that takes a number and checks if it's a prime number. Return true if it's prime, and false otherwise.
+
+**Solution:**
+
+```ts
+function isPrime(number: number): boolean {
+  if (number <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPrime(7)); // Output: true
+console.log(isPrime(12)); // Output: false
+```
